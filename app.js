@@ -7,7 +7,8 @@ const app = express();
 app.use(bodyparser.json());
 const jwt= require("jsonwebtoken");
 //process.env.PORT=readline.question("Enter port")
-app.listen(process.env.PORT,(err)=>{
+const port =process.env.PORT || 3000
+app.listen(port,(err)=>{
     if(err){
         console.log(err);
     }
